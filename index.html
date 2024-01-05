@@ -25,6 +25,12 @@
         />
         <script src="countdown/simplyCountdown.min.js"></script>
 
+        <!-- Bootstrap Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
+
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
@@ -39,6 +45,197 @@
                 <div class="simply-countdown"></div>
                 <a href="#undangan" class="btn btn-lg mt-4">Lihat Undangan</a>
             </main>
+        </section>
+
+        <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">Fadel</a>
+                <button
+                    class="navbar-toggler border-0"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel"
+                >
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                            Fadel
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="navbar-nav ms-auto">
+                            <a class="nav-link" href="#home">Home</a>
+                            <a class="nav-link" href="#info">Info</a>
+                            <a class="nav-link" href="#story">Story</a>
+                            <a class="nav-link" href="#gallery">Gallery</a>
+                            <a class="nav-link" href="#rsvp">RSVP</a>
+                            <a class="nav-link" href="#gifts">Gifts</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="home" id="home">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <h2>Acara Pernikahan</h2>
+                        <h3>
+                            Diselenggarakan pada 20 November 2024 di Kedaton,
+                            Bandar Lampung.
+                        </h3>
+                        <p>
+                            Oleh karena itu, dengan segala hormat, kami
+                            bermaksud untuk mengundang Bapak/Ibu, Saudara/i,
+                            untuk hadir pada acara pernikahan kami.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row couple mt-5">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-8 text-end">
+                                <h3>Muhammad Yazid Fauzan</h3>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing elit. Est, sunt? Porro, quam!
+                                    Laudantium!
+                                </p>
+                                <p>
+                                    Putra dari Bpk. Lorem <br />
+                                    dan <br />
+                                    Ibu Ipsum
+                                </p>
+                            </div>
+                            <div class="col-4">
+                                <img
+                                    src="img/fauzan.png"
+                                    alt="Muhammad Yazid Fauzan"
+                                    class="img-responsive rounded-circle"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <span class="heart"><i class="bi bi-heart-fill"></i></span>
+
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-4">
+                                <img
+                                    src="img/dely.jpg"
+                                    alt="Dely Alihasandi Subing"
+                                    class="img-responsive rounded-circle"
+                                />
+                            </div>
+                            <div class="col-8">
+                                <h3>Dely Alihasandi Subing</h3>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing elit. Est, sunt? Porro, quam!
+                                    Laudantium!
+                                </p>
+                                <p>
+                                    Putri dari Bpk. Ipsum <br />
+                                    dan <br />
+                                    Ibu Lorem
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info" id="info">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-10 text-center">
+                        <h2>Informasi Acara</h2>
+                        <p class="alamat">
+                            Alamat: Gedung Pertemuan, Balai Krakatau. <br />
+                            Jl. Imam Bonjol No.100 ABC Sumber Rejo, Kota Baru,
+                            Kec. Langkapura, Kota Bandar Lampung
+                        </p>
+                        <a
+                            href="https://maps.app.goo.gl/pnoauJmrrnjT2GJa9"
+                            target="_blank"
+                            class="btn btn-light btn-sm my-4"
+                            >Klik untuk membuka peta</a
+                        >
+                        <p class="description">
+                            Diharapkan untuk tidak salah alamat dan tanggal.
+                            Manakala tiba ditujuan namun tidak ada tanda-tanda
+                            sedang dilangsungkan pernikahan, boleh jadi Anda
+                            salah jadwal, atau salah tempat.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-5 col-10">
+                        <div class="card text-center text-bg-light mb-5">
+                            <div class="card-header">Akad Nikah</div>
+                            <div class="card-body">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6">
+                                        <i class="bi bi-clock d-block"></i>
+                                        <span>08.00 - 10.00</span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <i class="bi bi-calendar3 d-block"></i>
+                                        <span>20 November 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                Saat acara akad diharapkan untuk kondusif
+                                menjaga kekhidmatan dan kekhusyuan seluruh
+                                prosesi.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-10">
+                        <div class="card text-center text-bg-light">
+                            <div class="card-header">Resepsi</div>
+                            <div class="card-body">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6">
+                                        <i class="bi bi-clock d-block"></i>
+                                        <span>11.00 - Selesai</span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <i class="bi bi-calendar3 d-block"></i>
+                                        <span>20 November 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                Saat acara akad diharapkan untuk kondusif
+                                menjaga kekhidmatan dan kekhusyuan seluruh
+                                prosesi.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <script
