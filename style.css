@@ -444,6 +444,7 @@ footer li {
     .home {
         background-size: cover;
         padding-top: 20rem;
+        min-height: 120vh;
     }
 
     .home .heart {
