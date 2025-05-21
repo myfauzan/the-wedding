@@ -568,10 +568,10 @@ footer li {
     }
 
     .timeline li .timeline-panel::before {
-        top: 30px;
+        top: 80px;
     }
 
-    .timeline li .timeline-panel::before {
+    /* .timeline li .timeline-panel::before {
         top: 31px;
-    }
+    } */
 }
