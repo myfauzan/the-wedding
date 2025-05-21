@@ -244,6 +244,19 @@ body {
     color: black;
 }
 
+.story,
+.gifts {
+    background-image: url(img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.story {
+    padding-top: 25rem;
+}
+
 .timeline {
     list-style: none;
     padding: 1.4rem 0;
@@ -256,8 +269,8 @@ body {
     top: 0;
     bottom: 0;
     position: absolute;
-    width: 1px;
-    background-color: #ccc;
+    width: 2px;
+    background-color: var(--gold);
     left: 50%;
 }
 
@@ -277,22 +290,33 @@ body {
 }
 
 .timeline li .timeline-image {
-    width: 160px;
-    height: 160px;
-    background-color: #ccc;
+    width: 100px;
+    height: 100px;
+    background-color: white;
     position: absolute;
+    top: 10%;
     left: 50%;
     border-radius: 50%;
+    border-color: var(--gold);
+    border: 0.2rem solid var(--gold);
     transform: translateX(-50%);
-    background-size: cover;
+    background-size: 70%;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.timeline li .timeline-image i {
+    font-size: 3rem;
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    color: var(--gold);
 }
 
 .timeline li .timeline-panel {
     width: 40%;
     float: left;
-    border: 1px solid #ccc;
+    border: 1px solid var(--gold);
     padding: 2rem;
     position: relative;
     border-radius: 8px;
@@ -304,8 +328,8 @@ body {
     display: inline-block;
     position: absolute;
     border-top: 15px solid transparent;
-    border-left: 15px solid #ccc;
-    border-right: 0 solid #ccc;
+    border-left: 15px solid var(--gold);
+    border-right: 0 solid var(--gold);
     border-bottom: 15px solid transparent;
     top: 80px;
     right: -15px;
@@ -375,12 +399,12 @@ body {
 
 footer {
     padding: 3rem;
-    background-color: var(--gold);
+    background-color: var(--bg);
     color: white;
 }
 
 footer a {
-    color: var(--bg);
+    color: var(--gold);
     font-weight: 700;
     text-decoration: none;
 }
@@ -444,7 +468,7 @@ footer li {
     .home {
         background-size: cover;
         padding-top: 20rem;
-        min-height: 120vh;
+        min-height: 130vh;
     }
 
     .home .heart {
@@ -470,7 +494,12 @@ footer li {
     .timeline li .timeline-image {
         left: 15px;
         margin-left: 45px;
-        top: 16px;
+        top: 20%;
+    }
+
+    .timeline li .timeline-image i {
+        left: 32%;
+        top: 25%;
     }
 
     .timeline li .timeline-panel {
@@ -509,8 +538,12 @@ footer li {
     }
 
     .timeline li .timeline-image {
-        width: 140px;
-        height: 140px;
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .timeline li .timeline-image i {
+        left: 31%;
     }
 }
 /* Mobile Phone */
