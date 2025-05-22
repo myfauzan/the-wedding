@@ -35,12 +35,20 @@ body {
 }
 
 .hero h1 {
-    font-family: 'Sacramento', cursive;
-    font-size: 6rem;
-    color: #e9a319;
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    color: var(--gold);
 }
 
-.hero h4 {
+.hero .mempelai {
+    padding-top: 2rem;
+    font-size: 8rem;
+    font-family: 'Sacramento', cursive;
+    color: var(--gold);
+}
+
+.hero h4,
+.hero h3 {
     font-size: 1.6rem;
 }
 
@@ -48,9 +56,19 @@ body {
     font-size: 1.4rem;
 }
 
+.hero h4 {
+    padding-bottom: 2rem;
+}
+
 .hero h4,
 .hero p {
-    color: #a86523;
+    color: var(--bg);
+}
+
+.hero span {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--gold);
 }
 
 .hero a {

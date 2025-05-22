@@ -42,10 +42,13 @@
             class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white"
         >
             <main>
-                <h4>Kepada <span>Bapak/Ibu/Saudara/i, </span></h4>
-                <h1>Fauzan & Dely</h1>
-                <p>Akan melangsungkan resepsi pernikahan dalam:</p>
-                <div class="simply-countdown"></div>
+                <h1>The Wedding Of</h1>
+                <h1 class="mempelai">Fauzan & Dely</h1>
+                <h4>08 Juni 2025</h4>
+                <p>Kepada Yth:</p>
+                <p>Bapak/Ibu/Saudara/i</p>
+                <p><span></span></p>
+                <!-- <div class="simply-countdown"></div> -->
                 <a href="#home" class="btn btn-lg mt-4" onclick="enableScroll()"
                     >Lihat Undangan</a
                 >
@@ -873,9 +876,9 @@
         <script>
             const urlParams = new URLSearchParams(window.location.search)
             const nama = urlParams.get('n') || ''
-            const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i'
-            const namaContainer = document.querySelector('.hero h4 span')
-            namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',')
+            const pronoun = urlParams.get('p') || ''
+            const namaContainer = document.querySelector('.hero span')
+            namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, '')
 
             document.querySelector('#nama').value = nama
         </script>
