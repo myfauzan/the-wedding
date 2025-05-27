@@ -514,6 +514,10 @@ footer li {
         padding: 70px;
     }
 
+    .rsvp {
+        background-size: cover;
+    }
+
     .home {
         background-size: cover;
         padding-top: 20rem;
