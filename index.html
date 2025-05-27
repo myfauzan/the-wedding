@@ -783,7 +783,7 @@
     const hero = document.getElementById('hero');
 
     // Fade out hero dengan Tailwind transition
-    hero.classList.add('opacity-0', 'transition-opacity', 'duration-1000');
+    hero.classList.add('opacity-0', 'transition-opacity');
 
     // Setelah fade out selesai (1s), sembunyikan dan kunci scroll atas
     setTimeout(() => {
@@ -799,7 +799,7 @@
           window.scrollTo({ top: rsvp.offsetTop, behavior: 'smooth' });
         }
       });
-    }, 1000);
+    }, 500);
   }
 
             function playAudio() {
