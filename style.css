@@ -90,13 +90,13 @@ body {
     color: var(--gold);
 }
 
-.hero button {
+.hero a {
     color: var(--gold);
     background-color: white;
     box-shadow: var(--shadow);
 }
 
-.hero button:hover {
+.hero a:hover {
     background-color: var(--gold);
     color: white;
 }
@@ -516,6 +516,10 @@ footer li {
 
     .rsvp {
         background-size: cover;
+    }
+
+    .rsvp .card {
+        margin-top: 10rem;
     }
 
     .home {

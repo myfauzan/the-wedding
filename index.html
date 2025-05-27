@@ -51,7 +51,7 @@
                 <p class="yth">Kepada Yth:</p>
                 <p>Bapak/Ibu/Saudara/i</p>
                 <p><span></span></p>
-                <button class="btn btn-lg mt-4" onclick="showUndangan()">Lihat Undangan</button>
+                <a href="#rsvp" class="btn btn-lg mt-4" onclick="enableScroll()">Lihat Undangan</a>
 
                 
             </main>
@@ -119,7 +119,7 @@
             </main>
             <div id="popupCard" class="popupCard fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 hidden">
                 <!-- Card -->
-                <div class="bg-orange-800 rounded-2xl shadow-xl w-full max-w-3xl relative max-h-[80vh] flex flex-col">
+                <div class="card bg-orange-800 rounded-2xl shadow-xl w-full max-w-3xl relative max-h-[80vh] flex flex-col">
                   
                   <!-- Tombol Tutup -->
                   <button id="closePopup" class="absolute rounded-2xl top-3 right-3 text-gray-500 hover:text-black text-2xl font-bold px-2 py-1">
@@ -774,30 +774,10 @@
                 window.onscroll = function () {}
                 rootElement.style.scrollBehavior = 'smooth'
                 // localStorage.setItem('opened', 'true')
-                document.getElementById('heroSection').style.display = 'none';
             
                 playAudio()
             }
-            function showUndangan() {
-                window.onscroll = function () {}
-    const hero = document.getElementById('hero');
-
-
-    
-      hero.style.display = 'none';
-
-      // Scroll ke RSVP
-      const rsvp = document.getElementById('rsvp');
-      rsvp.scrollIntoView({ behavior: 'smooth' });
-
-      // Tambahkan listener untuk mencegah scroll ke atas
-      window.addEventListener('scroll', function lockScrollToBottom() {
-        if (window.scrollY < rsvp.offsetTop - 50) {
-          window.scrollTo({ top: rsvp.offsetTop, behavior: 'smooth' });
-        }
-      });
-    
-  }
+            
 
             function playAudio() {
                 song.volume = 0.5
@@ -896,10 +876,12 @@
 
             openPopup.addEventListener('click', () => {
                 popupCard.classList.remove('hidden')
+                document.body.classList.add('overflow-hidden');
             })
 
             closePopup.addEventListener('click', () => {
                 popupCard.classList.add('hidden')
+                document.body.classList.remove('overflow-hidden');
             })
 
             // Klik di luar popup untuk menutup
