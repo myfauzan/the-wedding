@@ -28,16 +28,25 @@ body {
     min-height: 100vh;
 }
 
+.rsvp {
+    min-height: 115vh;
+}
+
 .hero h1,
 .hero h4,
 .hero p {
     text-shadow: var(--shadow);
 }
 
-.hero h1 {
+.hero h1,
+.rsvp h1 {
     font-family: 'Playfair Display', serif;
     font-size: 4rem;
     color: var(--gold);
+}
+
+.rsvp h1 {
+    padding-bottom: 2rem;
 }
 
 .hero .mempelai {
@@ -52,8 +61,14 @@ body {
     font-size: 1.6rem;
 }
 
-.hero p {
+.hero p,
+.rsvp .ucapan {
     font-size: 1.4rem;
+}
+
+.rsvp .ucapan {
+    font-family: 'Playfair Display', serif;
+    padding: 3rem 0 1rem 0;
 }
 
 .hero h4 {
@@ -63,6 +78,10 @@ body {
 .hero h4,
 .hero p {
     color: var(--bg);
+}
+
+.hero .yth {
+    margin-bottom: 0;
 }
 
 .hero span {
@@ -109,6 +128,14 @@ body {
 
 .home {
     background-image: url(img/bg.jpg);
+}
+
+.rsvp {
+    background-image: url(img/bg2.jpg);
+}
+
+.home,
+.rsvp {
     background-size: auto;
     background-position: center;
     height: 100%;
@@ -119,11 +146,15 @@ body {
     padding-bottom: 5rem;
 }
 
+.rsvp {
+    background-blend-mode: ;
+}
+
 .home h2,
 .info h2,
 .story h2,
 .gallery h2,
-.rsvp h2,
+.popupCard h2,
 .gifts h2 {
     color: var(--gold);
     font-family: 'Sacramento', cursive;

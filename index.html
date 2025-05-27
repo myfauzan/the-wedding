@@ -34,6 +34,9 @@
         <!-- Sweet Alert -->
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
@@ -45,13 +48,12 @@
                 <h1>The Wedding Of</h1>
                 <h1 class="mempelai">Fauzan & Dely</h1>
                 <h4>08 Juni 2025</h4>
-                <p>Kepada Yth:</p>
+                <p class="yth">Kepada Yth:</p>
                 <p>Bapak/Ibu/Saudara/i</p>
                 <p><span></span></p>
-                <!-- <div class="simply-countdown"></div> -->
-                <a href="#home" class="btn btn-lg mt-4" onclick="enableScroll()"
-                    >Lihat Undangan</a
-                >
+                <button class="btn btn-lg mt-4" onclick="showUndangan()">Lihat Undangan</button>
+
+                
             </main>
         </section>
 
@@ -98,6 +100,91 @@
                 </div>
             </div>
         </nav>
+        <section
+            id="rsvp"
+            class="rsvp w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white"
+        >
+            <main>
+                <h1>Menghitung Hari</h1>
+                <div class="simply-countdown"></div>
+
+                <p class="ucapan">Kirim Ucapan untuk mempelai</br>dan konfirmasi kehadiran</p>
+
+                <button
+                    id="openPopup"
+                    class="px-6 py-3 rounded-xl shadow-lg"
+                >
+                    Kirim Ucapan RSVP
+                </button>
+            </main>
+            <div id="popupCard" class="popupCard fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 hidden">
+                <!-- Card -->
+                <div class="bg-orange-800 rounded-2xl shadow-xl w-full max-w-3xl relative max-h-[80vh] flex flex-col">
+                  
+                  <!-- Tombol Tutup -->
+                  <button id="closePopup" class="absolute top-3 right-3 text-gray-500 hover:text-black text-2xl font-bold px-2 py-2">
+                    &times;
+                  </button>
+            
+                  <!-- Konten scrollable -->
+                  <div class="p-6 overflow-y-auto max-h-[calc(90vh-3rem)]">
+                    <div class="text-center mb-6">
+                      <h2 class="text-2xl font-bold pt-6">Konfirmasi Kehadiran</h2>
+                      <p class="pt-10">Isi form di bawah ini untuk melakukan konfirmasi kehadiran.</p>
+                    </div>
+            
+                    <form
+                      class="grid grid-cols-1 gap-4"
+                      method="POST"
+                      action="https://script.google.com/macros/s/AKfycbyzbdAIxNh8oIvadyUL06QueHAzUmTq4EMXTkY2iUqMN2PEARnr6VtVD_6nSNnz-U5hKA/exec"
+                      id="my-form"
+                    >
+                      <div>
+                        <label for="nama" class="block font-medium text-gray-700">Nama</label>
+                        <input type="text" id="nama" name="nama" class="mt-1 pl-2 text-black block w-full rounded border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                      </div>
+            
+                      <div>
+                        <label for="jumlah" class="block font-medium text-gray-700">Jumlah</label>
+                        <input type="number" id="jumlah" name="jumlah" min="1" max="5" value="1" class="mt-1 pl-2 text-black block w-full rounded border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                      </div>
+            
+                      <div>
+                        <label for="status" class="block font-medium text-gray-700">Konfirmasi</label>
+                        <select id="status" name="status" class="mt-1 pl-2 text-black block w-full rounded border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                          <option selected value="">Pilih salah satu</option>
+                          <option value="Hadir">Hadir</option>
+                          <option value="Tidak Hadir">Tidak Hadir</option>
+                        </select>
+                      </div>
+            
+                      <div class="text-right">
+                        <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition">
+                          Kirim
+                        </button>
+                      </div>
+                    </form>
+            
+                    <!-- Disqus -->
+                    <div class="mt-8">
+                      <div id="disqus_thread"></div>
+                      <script>
+                        (function () {
+                          var d = document, s = d.createElement('script');
+                          s.src = 'https://fadel-wedding.disqus.com/embed.js';
+                          s.setAttribute('data-timestamp', +new Date());
+                          (d.head || d.body).appendChild(s);
+                        })();
+                      </script>
+                      <noscript>
+                        Silakan aktifkan JavaScript untuk melihat komentar
+                        <a href="https://disqus.com/?ref_noscript">di sini</a>.
+                      </noscript>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
 
         <section class="home" id="home">
             <div class="container">
@@ -517,110 +604,6 @@
             </div>
         </section> -->
 
-        <section class="rsvp" id="rsvp">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8 col-10 text-center">
-                        <h2>Konfirmasi Kehadiran</h2>
-                        <p>
-                            Isi form di bawah ini untuk melakukan konfirmasi
-                            kehadiran.
-                        </p>
-                    </div>
-                </div>
-
-                <form
-                    class="row row-cols-lg-auto g-3 align-items-center justify-content-center"
-                    method="POST"
-                    action="https://script.google.com/macros/s/AKfycbyzbdAIxNh8oIvadyUL06QueHAzUmTq4EMXTkY2iUqMN2PEARnr6VtVD_6nSNnz-U5hKA/exec"
-                    id="my-form"
-                >
-                    <div class="col-12">
-                        <div class="mb-3">
-                            <label for="nama" class="form-label">Nama</label>
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="nama"
-                                name="nama"
-                            />
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="mb-3">
-                            <label for="jumlah" class="form-label"
-                                >Jumlah</label
-                            >
-                            <input
-                                type="number"
-                                class="form-control"
-                                id="jumlah"
-                                name="jumlah"
-                                min="1"
-                                max="5"
-                                length="1"
-                                value="1"
-                            />
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="mb-3">
-                            <label for="status" class="form-label"
-                                >Konfirmasi</label
-                            >
-                            <select
-                                name="status"
-                                id="status"
-                                class="form-select"
-                            >
-                                <option selected value="">
-                                    Pilih salah satu
-                                </option>
-                                <option value="Hadir">Hadir</option>
-                                <option value="Tidak Hadir">Tidak Hadir</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="col-12" style="margin-top: 37px">
-                        <button class="btn btn-primary">Kirim</button>
-                    </div>
-                </form>
-
-                <div class="row justify-content-center mt-5">
-                    <div class="col-md-6">
-                        <div id="disqus_thread"></div>
-                        <script>
-                            /**
-                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                            /*
-                            var disqus_config = function () {
-                            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                            };
-                             */
-                            ;(function () {
-                                // DON'T EDIT BELOW THIS LINE
-                                var d = document,
-                                    s = d.createElement('script')
-                                s.src =
-                                    'https://fadel-wedding.disqus.com/embed.js'
-                                s.setAttribute('data-timestamp', +new Date())
-                                ;(d.head || d.body).appendChild(s)
-                            })()
-                        </script>
-                        <noscript
-                            >Please enable JavaScript to view the
-                            <a href="https://disqus.com/?ref_noscript"
-                                >comments powered by Disqus.</a
-                            ></noscript
-                        >
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="gifts" id="gifts">
             <div class="container">
                 <div class="row justify-content-center">
@@ -710,6 +693,7 @@
                 <i class="bi bi-disc"></i>
             </div>
         </div>
+
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -790,8 +774,33 @@
                 window.onscroll = function () {}
                 rootElement.style.scrollBehavior = 'smooth'
                 // localStorage.setItem('opened', 'true')
+                document.getElementById('heroSection').style.display = 'none';
+            
                 playAudio()
             }
+            function showUndangan() {
+                window.onscroll = function () {}
+    const hero = document.getElementById('hero');
+
+    // Fade out hero dengan Tailwind transition
+    hero.classList.add('opacity-0', 'transition-opacity', 'duration-1000');
+
+    // Setelah fade out selesai (1s), sembunyikan dan kunci scroll atas
+    setTimeout(() => {
+      hero.style.display = 'none';
+
+      // Scroll ke RSVP
+      const rsvp = document.getElementById('rsvp');
+      rsvp.scrollIntoView({ behavior: 'smooth' });
+
+      // Tambahkan listener untuk mencegah scroll ke atas
+      window.addEventListener('scroll', function lockScrollToBottom() {
+        if (window.scrollY < rsvp.offsetTop - 50) {
+          window.scrollTo({ top: rsvp.offsetTop, behavior: 'smooth' });
+        }
+      });
+    }, 1000);
+  }
 
             function playAudio() {
                 song.volume = 0.5
@@ -881,6 +890,27 @@
             namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, '')
 
             document.querySelector('#nama').value = nama
+        </script>
+
+        <script>
+            const openPopup = document.getElementById('openPopup')
+            const closePopup = document.getElementById('closePopup')
+            const popupCard = document.getElementById('popupCard')
+
+            openPopup.addEventListener('click', () => {
+                popupCard.classList.remove('hidden')
+            })
+
+            closePopup.addEventListener('click', () => {
+                popupCard.classList.add('hidden')
+            })
+
+            // Klik di luar popup untuk menutup
+            popupCard.addEventListener('click', (e) => {
+                if (e.target === popupCard) {
+                    popupCard.classList.add('hidden')
+                }
+            })
         </script>
     </body>
 </html>
