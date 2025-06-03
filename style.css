@@ -580,11 +580,26 @@ footer li {
 
     .home,
     .info,
-    .quotes,
-    .gifts {
+    .quotes {
+        background-size: cover;
+        padding-top: 30rem;
+        min-height: 130vh;
+    }
+    .quotes {
         background-size: cover;
         padding-top: 20rem;
         min-height: 130vh;
+    }
+    .info {
+        background-size: cover;
+        padding-top: 30rem;
+        min-height: 130vh;
+    }
+
+    .gifts,
+    .thanks {
+        background-size: cover;
+        padding-top: 40rem;
     }
 
     .home .heart {
@@ -660,7 +675,8 @@ footer li {
     }
 
     .timeline li .timeline-image i {
-        left: 31%;
+        left: 35%;
+        top: 28%;
     }
 }
 /* Mobile Phone */
@@ -685,7 +701,11 @@ footer li {
     }
 
     .timeline li .timeline-panel::before {
-        top: 80px;
+        top: 55px;
+    }
+
+    .timeline li .timeline-panel::after {
+        top: 56px;
     }
 
     /* .timeline li .timeline-panel::before {
