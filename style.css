@@ -582,15 +582,11 @@ footer li {
     .info,
     .quotes {
         background-size: cover;
-        padding-top: 30rem;
-        min-height: 130vh;
-    }
-    .quotes {
-        background-size: cover;
         padding-top: 20rem;
         min-height: 130vh;
     }
-    .info {
+
+    .gifts {
         background-size: cover;
         padding-top: 30rem;
         min-height: 130vh;
