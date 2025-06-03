@@ -578,7 +578,6 @@ footer li {
         margin-top: 10rem;
     }
 
-    .home,
     .info,
     .quotes {
         background-size: cover;
@@ -586,7 +585,8 @@ footer li {
         min-height: 130vh;
     }
 
-    .gifts {
+    .gifts,
+    .home {
         background-size: cover;
         padding-top: 30rem;
         min-height: 130vh;
