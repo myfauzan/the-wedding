@@ -38,6 +38,15 @@
         <script src="https://cdn.tailwindcss.com"></script>
 
         <link rel="stylesheet" href="style.css" />
+
+        <!-- jQuery -->
+        <script src="functions/index.js"></script>
+
+        <!-- Firebase SDKs -->
+        <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+        <!-- Firebase Authentication -->
+        <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
     </head>
     <body>
         <section
@@ -165,6 +174,26 @@
                         </button>
                       </div>
                     </form>
+
+                    <!-- <div class="mt-8">
+                        <h3>Tinggalkan Komentar</h3>
+                        <form id="commentForm">
+                          <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium text-gray-700">Nama:</label>
+                            <input type="text" id="name" name="name" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                          </div>
+                          <div class="mb-4">
+                            <label for="comment" class="block text-sm font-medium text-gray-700">Komentar:</label>
+                            <textarea id="comment" name="comment" rows="4" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
+                          </div>
+                          <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Kirim Komentar</button>
+                        </form> -->
+                        <!-- Di sini Anda bisa menambahkan daftar komentar yang sudah ada -->
+                        <!-- <div id="commentsList" class="mt-8">
+                          <h4>Komentar:</h4> -->
+                          <!-- Komentar akan dimuat di sini -->
+                        <!-- </div>
+                      </div> -->
             
                     <!-- Disqus -->
                     <div class="mt-8">
@@ -756,6 +785,7 @@
             closePopup.addEventListener('click', () => {
                 popupCard.classList.add('hidden')
                 document.body.classList.remove('overflow-hidden');
+                // unsubscribe()
             })
 
             // Klik di luar popup untuk menutup
@@ -763,6 +793,7 @@
                 if (e.target === popupCard) {
                     popupCard.classList.add('hidden')
                     document.body.classList.remove('overflow-hidden');
+                    // unsubscribe()
                 }
             })
         </script>
