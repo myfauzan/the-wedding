@@ -34,7 +34,8 @@ body {
 
 .hero h1,
 .hero h4,
-.hero p {
+.hero p,
+.rsvp h1 {
     text-shadow: var(--shadow);
 }
 
@@ -90,15 +91,15 @@ body {
     color: var(--gold);
 }
 
-.hero a {
-    color: var(--gold);
-    background-color: white;
-    box-shadow: var(--shadow);
+.hero a:hover {
+    color: white;
+    background-color: var(--bg);
 }
 
-.hero a:hover {
+.hero a {
     background-color: var(--gold);
     color: white;
+    box-shadow: var(--shadow);
 }
 
 .mynavbar {
@@ -126,16 +127,23 @@ body {
     color: var(--gold);
 }
 
-.home {
+.home,
+.rsvp {
     background-image: url(img/bg.jpg);
 }
 
-.rsvp {
+.quotes,
+.info,
+.gifts {
     background-image: url(img/bg2.jpg);
 }
 
 .home,
-.rsvp {
+.rsvp,
+.info,
+.quotes,
+.thanks,
+.gifts {
     background-size: auto;
     background-position: center;
     height: 100%;
@@ -146,8 +154,16 @@ body {
     padding-bottom: 5rem;
 }
 
-.rsvp {
-    background-blend-mode: ;
+.quotes {
+    align-items: center;
+}
+
+.rsvp,
+.simply-countdown {
+    font-family: 'Playfair Display', serif;
+}
+
+.simply-countdown {
 }
 
 .home h2,
@@ -155,11 +171,16 @@ body {
 .story h2,
 .gallery h2,
 .popupCard h2,
-.gifts h2 {
+.gifts h2,
+.thanks h2 {
     color: var(--gold);
     font-family: 'Sacramento', cursive;
     font-size: 5rem;
     font-weight: 700;
+}
+
+.thanks h2 {
+    text-transform: capitalize;
 }
 
 .home h3 {
@@ -263,7 +284,8 @@ body {
 .story,
 .gallery,
 .rsvp,
-.gifts {
+.gifts,
+.thanks {
     padding-top: 10rem;
     padding-bottom: 8rem;
 }
@@ -271,7 +293,8 @@ body {
 .home span,
 .story span,
 .gallery span,
-.gifts span {
+.gifts span,
+.thanks span {
     text-transform: uppercase;
     color: #666;
     font-size: 0.9rem;
@@ -280,21 +303,37 @@ body {
     margin-bottom: 1rem;
 }
 
+.gifts span {
+    color: white;
+}
+
+.gifts .list-group {
+    padding-top: 3rem;
+}
+
 .story p,
 .gallery p,
 .info p,
 .rsvp p,
-.gifts p {
+.gifts p,
+.thanks p {
     font-size: 1.2rem;
     font-weight: 500;
 }
 
 .gifts p {
+    color: white;
+}
+.thanks p {
     color: black;
 }
 
+.thanks span {
+    padding-top: 2rem;
+}
+
 .story,
-.gifts {
+.thanks {
     background-image: url(img/bg.jpg);
     background-size: cover;
     background-position: center;
@@ -302,7 +341,8 @@ body {
     width: 100%;
 }
 
-.story {
+.story,
+.thanks {
     padding-top: 25rem;
 }
 
@@ -418,16 +458,20 @@ body {
     background-color: #f5f5f5;
 }
 
-.rsvp {
-    background-color: var(--bg);
-}
-
 .rsvp h2 {
     font-size: 4.5rem;
 }
 
 .rsvp p {
+    color: var(--bg);
+}
+
+.rsvp .card p {
     color: white;
+}
+
+.rsvp .card {
+    background-color: #7f250f;
 }
 
 .rsvp form label {
@@ -438,12 +482,23 @@ body {
     background-color: var(--gold);
     color: white;
     border: 1px solid var(--gold);
+    box-shadow: var(--shadow) !important;
 }
 
 .rsvp button:hover {
     background-color: white;
-    color: var(--gold);
+    color: var(--gold) !important;
     border: 1px solid white;
+}
+
+.quotes p,
+.quotes h3,
+.quotes span {
+    color: white;
+}
+
+.quotes P {
+    font-style: italic;
 }
 
 footer {
@@ -514,7 +569,8 @@ footer li {
         padding: 70px;
     }
 
-    .rsvp {
+    .rsvp,
+    .info {
         background-size: cover;
     }
 
@@ -522,7 +578,10 @@ footer li {
         margin-top: 10rem;
     }
 
-    .home {
+    .home,
+    .info,
+    .quotes,
+    .gifts {
         background-size: cover;
         padding-top: 20rem;
         min-height: 130vh;
@@ -536,6 +595,7 @@ footer li {
         content: 'Dengan';
         text-transform: capitalize;
         font-size: 2rem;
+        padding-top: 2rem;
     }
 
     .home .couple,

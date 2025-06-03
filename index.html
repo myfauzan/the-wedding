@@ -89,12 +89,13 @@
                     </div>
                     <div class="offcanvas-body">
                         <div class="navbar-nav ms-auto">
-                            <a class="nav-link" href="#home">Home</a>
+                            <a class="nav-link" href="#rsvp">RSVP</a>
+                            <a class="nav-link" href="#quotes">Quotes</a>
+                            <a class="nav-link" href="#home">Bride</a>
                             <a class="nav-link" href="#info">Info</a>
                             <a class="nav-link" href="#story">Story</a>
-                            <!-- <a class="nav-link" href="#gallery">Gallery</a> -->
-                            <a class="nav-link" href="#rsvp">RSVP</a>
                             <a class="nav-link" href="#gifts">Gifts</a>
+                            <a class="nav-link" href="#thanks">Thanks</a>
                         </div>
                     </div>
                 </div>
@@ -184,6 +185,19 @@
                   </div>
                 </div>
               </div>
+        </section>
+
+        <section  id="quotes" class="quotes quotes w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-8 text-center">
+                        <h3>"Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."</h3>
+                        <p>(Ar-Rum: 21)</p>
+                    </div>
+                </div>
+
+                
+            </div>
         </section>
 
         <section class="home" id="home">
@@ -627,17 +641,8 @@
                             </li>
                             <li class="list-group-item">
                                 <div class="fw-bold">BNI</div>
-                                1604040496 DELY ALIHASANDI SUBING
+                                1604040496 - DELY ALIHASANDI SUBING
                             </li>
-                            <!-- <li class="list-group-item">
-                                <div class="fw-bold">Saweria</div>
-                                <img
-                                    src="img/saweria.png"
-                                    alt="Saweria QR"
-                                    class="img-thumbnail"
-                                    width="150"
-                                />
-                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -650,6 +655,20 @@
                             Jl. Hj Komarudin, Perum Glora Persada Blok H-1,
                             Rajabasa - Bandar Lampung
                         </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="thanks" id="thanks">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-10 text-center">
+                        <p>
+                            Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do'a restu kepada kedua mempelai.
+                        </p>
+                        <span>hormat kami yang mengundang</span>
+                        <h2>Fauzan & Dely</h2>
                     </div>
                 </div>
             </div>
@@ -888,6 +907,7 @@
             popupCard.addEventListener('click', (e) => {
                 if (e.target === popupCard) {
                     popupCard.classList.add('hidden')
+                    document.body.classList.remove('overflow-hidden');
                 }
             })
         </script>
